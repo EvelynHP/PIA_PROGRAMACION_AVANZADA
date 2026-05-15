@@ -85,15 +85,17 @@ while True:
 
     #opcion 3: Ver producto 
     elif opcion == 3:
-        id_producto = int(input("Ingresa el id del producto: "))
-        
-        for producto in lista_productos:
-            if producto.id_producto == id_producto:
-                producto.mostrarinfo()
-                break
+        id_producto = int(input("Ingresa el id del producto: ")) #se pide el id del producto 
+        producto_existe = False 
 
-        else: 
-            print("No existe producto con ese id")    
+        for producto in lista_productos: #recorre cada producto de la lista 
+            if producto.id_producto == id_producto: #valida que se realice la igualdad de los id 
+                producto.mostrar_info() #despues de comprobar, mostrara la informacion de ese producto
+                producto_existe = True 
+                break 
+
+        if producto_existe == False: 
+            print("No existe producto con ese id") #si no existen coincidencias mostrara un mensaje de que no existe dicho producto
             
         
 
