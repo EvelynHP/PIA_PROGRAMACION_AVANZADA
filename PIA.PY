@@ -57,3 +57,4 @@ while True:
             objeto_producto = Producto(id_producto,descripcion,marca)
             lista_productos.append(objeto_producto)
             print("Se ah guardado con exito el producto")
+
