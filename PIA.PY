@@ -5,11 +5,12 @@ class Producto:
         self.marca = marca 
         self.comentarios = []
 
-        
 
 class Comentario:
     def __init__(self,texto_coment,autor):
         self.texto_coment = texto_coment
         self.autor = autor
 
+lista_productos = []
 
+# cambio de prueba
