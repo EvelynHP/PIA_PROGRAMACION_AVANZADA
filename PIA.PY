@@ -58,3 +58,28 @@ while True:
             lista_productos.append(objeto_producto)
             print("Se ah guardado con exito el producto")
 
+ #opcion 2: Agregar comentario a producto
+    elif opcion == 2:
+        id_producto = int(input("Ingrese el id del producto: "))   #pedimos el id del producto
+        producto_existe = False #variable de control para confirmar que haya encontrado el id del prodcuto
+
+        for producto in lista_productos:    #reccorremos la lista para poder comparar y buscar el producto
+            if producto.id_producto == id_producto:
+
+                autor = input("Ingresa el nombre del autor: ") #necesitamos el nombre de quien va a escribir el comentario
+                texto_comentario = input("Introduzca el comentario que desea guardar: ") 
+
+                #preparacion del objeto para guardar en la lista pero la que está dentro de la clase
+                objeto_comentario = Comentario(texto_comentario,autor)
+                producto.comentarios.append(objeto_comentario)
+
+                producto_existe = True #al encontrar el producto cambia el estado de producto_existente para que salte el if de más adelante
+
+                print("Se agrego correctamente el comentario.")
+                break
+
+        if producto_existe == False: #si el producto no existe no hace el proceso anterior y se le hace saber al usuario
+                print("El id que introdujo no existe")
+
+
+                
