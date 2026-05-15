@@ -81,5 +81,21 @@ while True:
         if producto_existe == False: #si el producto no existe no hace el proceso anterior y se le hace saber al usuario
                 print("El id que introdujo no existe")
 
+    #opcion 3: Ver producto 
+    elif opcion == 3:
+        id_producto = int(input("Ingresa el id del producto: "))
+        
+        for producto in lista_productos:
+            if producto.id_producto == id_producto:
+                producto.mostrarinfo()
+                break
+
+        else: 
+            print("No existe producto con ese id")    
+            
+        
+
+
+
 
                 
