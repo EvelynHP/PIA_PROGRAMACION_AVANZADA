@@ -6,21 +6,19 @@ class Producto:
         self.comentarios = []
 
     def mostrar_info(self):
-        print(f" ID_producto: {self.id_producto}  Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ")  
+        print(f" ID_producto: {self.id_producto}    Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ")  
 
 
 class Comentario:
     def __init__(self,texto_coment,autor):
         self.texto_coment = texto_coment
         self.autor = autor
-
-
-    
+         
 
 lista_productos = []
 
 
-#mensaje de bienvendia al programa
+#mensaje de bienvenida al programa
 print("BIENVENIDOS: MUEBLES PARA TU OFICINA")
 #inicializacion del menú con el cliclo "while true" y se ejecute hasta que el usuario quiera "salir"   
 while True:
