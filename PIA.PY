@@ -5,6 +5,9 @@ class Producto:
         self.marca = marca 
         self.comentarios = []
 
+    def mostrar_info(self):
+        print(f" ID_producto: {self.id_producto}  Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ")  
+
 
 class Comentario:
     def __init__(self,texto_coment,autor):
@@ -12,8 +15,7 @@ class Comentario:
         self.autor = autor
 
 
-    def mostrar_info(self):
-        print(f" ID_producto: {self.id_producto}  Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ")  
+    
 
 lista_productos = []
 
