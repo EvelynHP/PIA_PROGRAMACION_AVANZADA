@@ -1,3 +1,4 @@
+#inicializacion de clase "Producto"
 class Producto:
     def __init__(self,id_producto,descripcion,marca):
         self.id_producto = id_producto
@@ -5,16 +6,28 @@ class Producto:
         self.marca = marca 
         self.comentarios = []
 
+    #Definir el formato para poder ver la infromacion de la clase "Producto"
     def mostrar_info(self):
-        print(f" ID_producto: {self.id_producto}    Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ")  
+            print(f"Descripcion del producto: {self.descripcion}    La marca es: {self.marca} ") 
+            print(f"comentarios: ") 
 
+            if not self.comentarios:
+                print("no hay comentarios aun")
+            else:
+                for c in self.comentarios:
+                    print(c)
 
+#inicializacion de la clase "comentarios" que irán guardados en el atributo de clase "Producto"    
 class Comentario:
-    def __init__(self,texto_coment,autor):
-        self.texto_coment = texto_coment
+    def __init__(self,autor, texto_comentario):
         self.autor = autor
-         
+        self.texto_comentario = texto_comentario
 
+    def __str__(self):
+        return f" -{self.autor}: {self.texto_comentario}"
+#fin de las funciones de la clase
+
+#inicialiacion de tabla vacia
 lista_productos = []
 
 
